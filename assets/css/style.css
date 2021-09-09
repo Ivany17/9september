@@ -3,30 +3,34 @@
 }
 
 h1 {
+    position: relative;
     font-size: 76px;
+    width: 300px;
+    margin: 0 auto;
     text-align: center;
     color: greenyellow;
+    background-color: indigo;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-p {
-    cursor: wait;
+h1:before,
+h1::after {
+    position: absolute;
+    content: url(./../icons/adobe-acrobat.svg);
+    width: 50px;
+    display: inline-block;
 }
 
-/* p::first-letter {
-    font-size: 2em;
+h1::before {
+    left: 100%;
+}
+
+h1::after {
+    right: 100%;
+}
+
+p::before {
+    content: open-quote;
     color: red;
-    font-weight: bolder;
-} */
-
-/* p::first-line {
-    background-color: rgb(128, 197, 199);
-    color: white;
-} */
-
-p::selection {
-    color: blueviolet;
-    background-color: yellow;
-    cursor: zoom-in;
-    text-shadow: 1px 1px 2px black;
+    font-size: 2em;
 }
